@@ -12,10 +12,19 @@ requiere token.
 ## Instalación del CLI con Homebrew
 
 ```bash
-brew tap v0x-platform/v0x https://github.com/v0x-platform/homebrew-v0x
+# Añade el tap por su nombre canónico (SIN URL: Homebrew resuelve
+# github.com/v0x-platform/homebrew-v0x). Añadirlo con la URL explícita dispara
+# el aviso "untrusted tap".
+brew tap v0x-platform/v0x
 brew install v0x
 v0x --version
 ```
+
+> Si `brew` responde `Refusing to load formula ... from untrusted tap`, es porque
+> el tap se añadió con la URL. Quítalo y vuelve a añadirlo por el nombre:
+> `brew untap v0x-platform/v0x && brew tap v0x-platform/v0x`. Alternativa puntual:
+> `brew trust v0x-platform/v0x`.
+
 
 ## Instalación de plugins
 

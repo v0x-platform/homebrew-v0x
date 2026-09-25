@@ -3,13 +3,15 @@
 # de los assets del tag cli-vX.Y.Z de este repo (homebrew-v0x).
 #
 # Uso (lo invoca el workflow de release de v0x-cli, o a mano):
-#   VERSION=0.1.2 bash scripts/update-formula.sh
+#   CLI_VERSION=0.1.2 bash scripts/update-formula.sh    # (o VERSION=0.1.2)
 #
 # Requiere que los assets v0x-macos-arm64 y v0x-linux-x64 ya estén publicados
 # en el release cli-v$VERSION de v0x-platform/homebrew-v0x.
 set -euo pipefail
 
-: "${VERSION:?export VERSION=X.Y.Z}"
+# Acepta CLI_VERSION (coherente con install.sh) o VERSION.
+VERSION="${CLI_VERSION:-${VERSION:-}}"
+: "${VERSION:?export CLI_VERSION=X.Y.Z (o VERSION=X.Y.Z)}"
 ORG="v0x-platform"
 REPO="homebrew-v0x"
 TAG="cli-v${VERSION}"

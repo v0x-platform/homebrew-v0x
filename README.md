@@ -29,12 +29,30 @@ v0x --version
 ## Instalación de plugins
 
 Los plugins (p. ej. `forge-aws`, cdylib) no se instalan por Homebrew (Homebrew es
-para ejecutables del PATH). Se bajan de los releases de este repo con el CLI o el
-`install.sh`:
+para ejecutables del PATH). Se bajan de los releases de este repo con el CLI:
 
 ```bash
 v0x plugin install forge-aws        # baja el asset del release forge-aws-* de este repo
 ```
+
+## Instalación del CLI SIN Homebrew (descarga directa)
+
+Si no usas Homebrew (o Homebrew pide actualizar las Command Line Tools), instala
+el binario directamente desde el release público de ESTE repo — sin token:
+
+```bash
+# macOS Apple Silicon (ajusta la version al tag cli-v* mas reciente):
+curl -fsSL "https://github.com/v0x-platform/homebrew-v0x/releases/download/cli-v0.1.8/v0x-macos-arm64" \
+  -o ~/.local/bin/v0x
+chmod +x ~/.local/bin/v0x
+# Linux x64: usa .../cli-v0.1.8/v0x-linux-x64
+v0x --version
+```
+
+> El script `install.sh` vive en el repo **privado** `v0x-cli`, así que
+> `curl https://raw.githubusercontent.com/v0x-platform/v0x-cli/main/install.sh`
+> devuelve **404** (raw de repo privado no sirve sin auth). Usa la descarga
+> directa de arriba, o clona `v0x-cli` y corre `install.sh` localmente.
 
 ## Esquema de releases
 

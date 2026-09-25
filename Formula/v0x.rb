@@ -13,20 +13,20 @@
 class V0x < Formula
   desc "CLI de la plataforma v0x (gestor de plugins y orquestador de forja)"
   homepage "https://github.com/v0x-platform/v0x-cli"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/v0x-platform/homebrew-v0x/releases/download/cli-v0.1.7/v0x-macos-arm64"
-      sha256 "9ed4dfe2df6a7e0b4343c0366843dd8fe3a9a953cc7021a62aa62f4fcf5ada81"
+      url "https://github.com/v0x-platform/homebrew-v0x/releases/download/cli-v0.1.8/v0x-macos-arm64"
+      sha256 "6c3d85e726bf3d518dd084485039bfcd6284ba2dd6284c08acafb14dd47b49a6"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/v0x-platform/homebrew-v0x/releases/download/cli-v0.1.7/v0x-linux-x64"
-      sha256 "a0bea027d6b765d9af68380dc42b3f99a0f6c50648237b4964d010b8e7a6ddba"
+      url "https://github.com/v0x-platform/homebrew-v0x/releases/download/cli-v0.1.8/v0x-linux-x64"
+      sha256 "887f6c624e884880430df2bfa7e7158a16fb282e71eb20c3945c7642b5cd5790"
     end
   end
 
